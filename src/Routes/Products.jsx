@@ -2,7 +2,7 @@ import React from 'react';
 
 const Products = ({ addToCart }) => {
   const handleAddToCart = (product) => {
-    // Verificați dacă addToCart este o funcție înainte de a o apela
+    
     if (typeof addToCart === 'function') {
       addToCart(product);
     }
