@@ -168,7 +168,7 @@ span {
  }
   
   .footer-social ul li {
-    margin-bottom: 10px; /* Aici poți ajusta spațiul între elementele <li> */
+    margin-bottom: 10px; 
   }
   
 
@@ -340,7 +340,7 @@ span {
    .uae{
     display: flex;
     position: absolute;
-    width: 100%; /* Asigură că elementul ocupă întreaga lățime a containerului */
+    width: 100%; 
     height: 10%;
     
     
