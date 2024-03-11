@@ -3,33 +3,36 @@ import { createRoot } from "react-dom/client";
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
   Outlet,
 } from "react-router-dom";
 import Blog from "./Routes/Blog";
 import Home from "./Routes/Home";
 import Products from "./Routes/Products";
-import AboutUs from "./Routes/About Us"; 
+import AboutUs from "./Routes/AboutUs";
 import Navbar from "./Components/Navbar";
 import "./App.css";
 import Dubai from "./Page/Dubai";
-import AbuDhabi from "./Page/AbuDhabi"
+import AbuDhabi from "./Page/AbuDhabi";
 import Footer from "./Components/Footer";
 import { FaCartPlus } from "react-icons/fa";
 import Cart from "./Components/Cart";
+import { useState } from "react";
 
+export const AppLayout = () => {
+  const [cartItems, setCartItems] = useState([]);
 
-const AppLayout = () => (
-  <>
-    <Navbar />
-     
-    <Outlet />
+  const handleAddToCart = (product) => {
+    setCartItems((prevItems) => [...prevItems, product]);
+  };
 
-    <Footer />
-    
-  </>
-);
+  return (
+    <>
+      <Navbar  />
+      <Outlet  />
+      <Footer />
+    </>
+  );
+};
 
 const router = createBrowserRouter([
   {
@@ -37,42 +40,35 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />
+        element: <Home />,
       },
       {
         path: "blog",
         element: <Blog />,
-        
       },
       {
         path: "products",
-        element: <Products />,
+        element: <Products/>,
       },
       {
-        path: "AboutUs",
-        element: <AboutUs />
+        path: "aboutus",
+        element: <AboutUs />,
       },
       {
         path: "/blog/Dubai",
-        element: <Dubai />
+        element: <Dubai />,
       },
       {
         path: "/blog/AbuDhabi",
-        element: <AbuDhabi />
+        element: <AbuDhabi />,
       },
       {
         path: "/cart",
-        element: <Cart />
+        element: <Cart />,
       },
-      
-        
-      
-     
-    ]
-    
-  }
+    ],
+  },
 ]);
-
 
 createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />

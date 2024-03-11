@@ -1,7 +1,7 @@
 const BlogPage = () => {
     return ( 
         <div class="blog-page">
-            <h1>Aici trebuie</h1>
+            <h1>Dubai</h1>
         </div>
      );
 }

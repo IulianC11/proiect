@@ -1,16 +1,13 @@
-// Products.js
-import React from "react";
+import React from 'react';
 
-function Products({ addToCart }) {
-  const handleAddToCart = (id) => {
-    const product = {
-      id,
-      name: `Product ${id}`,
-      price: 10,
-    };
-    addToCart(product);
+const Products = ({ addToCart }) => {
+  const handleAddToCart = (product) => {
+    // Verificați dacă addToCart este o funcție înainte de a o apela
+    if (typeof addToCart === 'function') {
+      addToCart(product);
+    }
   };
-
+  
   return (
     <div className="Products">
       <div className="top-prod">
@@ -41,6 +38,6 @@ function Products({ addToCart }) {
       </div>
     </div>
   );
-}
+};
 
 export default Products;
