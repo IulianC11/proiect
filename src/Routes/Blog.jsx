@@ -19,11 +19,12 @@ function Blog() {
            <div className="uae">
           <div className="titluuae">
 
-          <div class="line-top"></div>
-
+          <div className="lines"></div>
+            <div className="ttl">
            <h3>Emiratele Arabe Unite</h3>
-
-           <div class="line"></div>
+           
+</div>
+          
 
 
           </div>

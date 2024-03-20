@@ -29,7 +29,7 @@ function Navbar({ cartItems }) {
   }, [isSidebarOpen]);
 
   return (
-    <IconContext.Provider value={{ color: "undifined" }}>
+    <IconContext.Provider value>
       <div className="navbar">
         <Link to="#" className="menu-bars">
           <FaBars onClick={toggleSidebar} />

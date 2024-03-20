@@ -6,6 +6,7 @@
   --grey:  #0c0c0c;
   --orange:#ff73006b;
   --red:#ff0000;
+  --grey2:#e4e1e1;
 }
 
 
@@ -35,6 +36,8 @@
   color: var(--white);
   position: absolute;
   z-index: 0;
+  
+  
 }
 
 
@@ -161,9 +164,11 @@ span {
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-top: auto;
+  
   z-index: 1;
   background-color: var(--grey);
- 
+  
   height: 150px;
  }
   
@@ -184,8 +189,12 @@ span {
 
    /*home*/
 .home{
-  width: 98.2vw;
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+  
+  
 }
 
 
@@ -193,12 +202,16 @@ span {
    .top{
   position: relative;
   z-index: 1;
+  
+  
+  
 }
 
    .top img{
-   width: 100%;
+   width: 99.99%;
     margin-top: 3%;
     object-fit: cover;
+    
   }
 
   .top h3, p{
@@ -262,7 +275,96 @@ span {
   
 }
 
-/*main*/
+/*main-home*/
+
+
+/*cards*/
+.main {
+  display: flex;
+  background-color: var(--black);
+  height: 100vh;
+  z-index: 4;
+  justify-content: center;
+  
+}
+
+.cards-home{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 40%;
+
+  
+  
+}
+
+.card-home {
+ 
+  
+  position: relative; 
+  margin: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(30.33% - 20px); 
+  height: 450px;
+  width: 320px;
+  
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  
+  
+  padding: 0; 
+  text-decoration: none;
+  border-radius: 8px; 
+  position: relative; 
+}
+
+.button h1 {
+  display: flex;
+  flex-wrap: wrap;
+   position: absolute; 
+   color: var(--grey2); 
+   font-size: 40px; 
+   z-index:1; 
+   margin-top: 400px;
+   font-weight: 200;
+   font-family: 'Philosopher';
+   
+   
+   
+ 
+  
+ 
+}
+
+.photo-tr {
+  width: 430px; 
+  height: 400px; 
+  
+  position: relative;
+}
+
+/*cards*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*main-home*/
 
 
 .blog  {
@@ -340,53 +442,95 @@ span {
    .uae{
     display: flex;
     position: absolute;
-    width: 100%; 
-    height: 10%;
+    width: auto; 
+    height: 100px;
+    display: flex;
+  
+    
+    
+    
     
     
     
   }
    .titluuae {
-    width: 100%;
-    height: 10%;
-    margin-left: 35.4%;
-    margin-top: -2%;
+    margin-top: -25%;
+    flex-direction: column-reverse;
+    
+    
+    width: 900px;
+    height: auto;
+    
    
     
 
     
     
   }
-  
-   .line-top {
-    position: absolute;
-    width: 20%;
-    height: 2px; 
-    background: linear-gradient(to left, transparent, rgb(255, 255, 255)); 
-    margin-left: 30.5%;
-    margin-top: 1.9%;
+  .ttl{
+    height: 100%;
+    width: auto;
+    margin-left: 2%;
+    flex-direction: column;
+    display: flex;
     
-    
-    
+
   }
+
+  .ttl h3{
+    margin-left: 20%;
+    margin-top: -3%;
+    font-size: 50px;
+  }
+  
+   .lines {
+    width: auto;
+    height: 45%;
+  
+   
+   
+  
+    
+ }
+    
+   .ttl::after, .ttl::before{
+  content: '';
+  position: absolute;
+  
+  height: 2px;
+  background-color: var(--white);
+  width: 35%;
+  
+  
+
+   } 
+
+   .ttl::after{
+    margin-left:-25%; 
+    
+    
+   }
+
+   .ttl::before{
+    margin-left: 83%;
+
+    
+
+   }
+    
+  
 
   
    
   
-  .line {
-    position: absolute;
-    width: 20%;
-    height: 2px; 
-    background: linear-gradient(to left, rgb(255, 255, 255), transparent); 
-    margin-left: -22%;
-    margin-top: -1.6%;
+  
+  
     
       
       
       
     
-    
-  }
+ 
 
   
 /*titluuae*/
@@ -415,7 +559,7 @@ span {
   {
     display: flex;
     margin-top: 37%;
-    margin-right: 10%;
+    margin-right: 13%;
     position: relative;
     
     
@@ -518,7 +662,132 @@ a
   
 
 
+/*Dubai page*/
 
+/*Top-dubai*/
+.blog-page{
+ 
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: var(--black);
+  min-height: 100vh;
+}
+
+.top-dubai{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+ 
+
+ 
+ 
+}
+.top-dubai h1{
+  
+  position: absolute;
+  z-index: 2;
+  height: 5%;
+  width: 40%;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  bottom: 0;
+  text-shadow: 2px 2px 3px var(--black);
+  font-size: 30px;
+}
+ .top-dubai .jumeirah{
+  border-radius: 1%;
+  height: 1050px;
+  margin-top: 3%;
+  position: relative;
+  z-index: 1;
+  }
+
+
+
+
+.para-dubai{
+  display: flex;
+  padding-top: 40px;
+  flex-wrap: wrap;
+  width: 880px;
+  justify-content: center;
+  flex-direction: column;
+  height: 20%;
+   margin-left: 3.5%;
+
+  
+  
+  
+  
+
+}
+ 
+
+.top-dubai .para-dubai p{
+  line-height: 2;
+  justify-content: center;
+  color: var(--white);
+  font-size: 19px;
+  padding-top: 30px;
+ 
+ text-align: justify;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+  
+ 
+
+  
+  
+}
+
+.frame{
+  display: flex;
+  height:30%;
+  border-radius: 1%;
+  position: relative;
+  
+  
+
+  
+ 
+}
+
+.photo-frame{
+ display: flex;
+ justify-content: center;
+ width: 30%;
+ padding-top: 3%;
+ padding-left: 3%;
+ 
+}
+
+.para-dubai a{
+  display: inline-block;
+  text-decoration: underline;
+  padding-right: 5px;
+  color: var(--orange);
+ 
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Dubai page*/
     
  
     
@@ -548,7 +817,7 @@ a
    
 
 
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 1700px) {
     .top,
     .blog,
     .destinations,
@@ -563,6 +832,12 @@ a
     .navbar img {
       padding-left: 40%;
     }
+
+
+    .navbar h1{
+      font-size: 100%;
+     
+    }
   
     .nav-menu {
       width: 200px;
@@ -570,11 +845,17 @@ a
 
     .top h3{
       font-size: 3rem;
-      margin-bottom: 50%;
+      margin-bottom: 40%;
+    }
+
+
+    .top p{
+      margin-bottom: 20%
     }
     
     .top img{
-      height: 110%;
+      height: auto;
+      width: auto;
     }
   
   .top span{
@@ -592,21 +873,19 @@ a
       font-size: 20px;
     }
 
-    .line-top{
-     
-      justify-content: center;
+    .uae{
+      width: 40%;
     }
 
-    .line{
-      width: 17%;
-      margin-top: -1%;
-    }
-
-    .uae, .titluuae{
-      font-size: 90%;
-      margin-top: -3%;
-      align-items: baseline;
+     .titluuae{
       
+      margin-top: -3%;
+      
+      
+    }
+
+    .ttl h3{
+      font-size: 60%;
     }
 
     .cards{
@@ -626,6 +905,7 @@ a
     .product-price{
       padding-top: 10px;
     }
+    
 
 
   }
@@ -636,7 +916,7 @@ a
    
 
 
-    @media screen and (max-width: 790px) {
+    @media screen and (max-width: 1000px) {
       .top,
       .blog,
       .destinations,
@@ -651,6 +931,8 @@ a
       .navbar img {
         padding-left: 40%;
       }
+
+    
     
       .nav-menu {
         width: 200px;
@@ -659,15 +941,19 @@ a
 
       .top h3{
         font-size: 2rem;
-        margin-bottom: 120%;
+        margin-bottom: 80%;
+      
       }
+
+
+
     .top p{
-      margin-bottom:60% ;
+      margin-bottom:40% ;
     }
     
     .top img{
-      width: auto;
-    height: 150vw;
+      
+    height: auto;
     margin-top: -50%;
     
      }
@@ -720,7 +1006,7 @@ a
       }
   
       .uae, .titluuae{
-        font-size: 70%;
+        font-size: 90%;
         margin-top: 1%;
       }
 
@@ -732,6 +1018,10 @@ a
       }
       .product-price{
         padding-top: 10px;
+      }
+
+      .card-home {
+        width: calc(50% - 20px); /* pentru 2 carduri aliniate pe ecran mic */
       }
   
   
@@ -748,6 +1038,8 @@ a
       .destinations,
       .aboutus {
         font-size: 2rem;
+        
+        
       }
     
       .navbar {
@@ -757,16 +1049,28 @@ a
       .navbar img {
         padding-left: 35%;
       }
+
+      .navbar h1{
+        font-size: 100%;
+      }
     
       .nav-menu {
         width: 180px;
       }
+
+      
      .top img{
-      width: auto;
-      height: 210vw;
+      
+      height: auto;
       margin-top: -50%;
       
      }
+
+
+     .top h3{
+      font-size: 90%;
+      margin-bottom: 120%;
+    }
      
      .toop .p1, .p2, h3{
       font-size: 9px;
@@ -790,21 +1094,12 @@ a
      }
 
 
-     .line-top{
-      width: 17%;
-      margin-left: 25%;
-      height: 1%;
-    }
-
-    .line{
-      width: 14%;
-      margin-top: -33.5%;
-      height: 1%;
+     
       
-    }
+    
 
     .uae, .titluuae{
-      font-size: 90%;
+      font-size: 70%;
       margin-top: -3%;
       align-items: baseline;
       
@@ -818,7 +1113,17 @@ a
     .product-price{
       padding-top: 10px;
     }
+    .card-home {
+      width: calc(100% - 20px); /* un singur card pe ecran mic */
+    }
     
+    .top-dubai .para-dubai p{
+      font-size: 15px;
+    }
+
+
+
+
     }
 /*Product*/
 
