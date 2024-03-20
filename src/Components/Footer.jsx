@@ -8,8 +8,8 @@ function Footer() {
       <div className="footer-social">
         <p>Urmați-ne pe:</p><br></br><br></br>
         <ul>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
+          <li><a href="https://www.instagram.com/iuliancitan/">Facebook</a></li>
+          <li><a href="https://www.instagram.com/iuliancitan/">Twitter</a></li>
           <li><a href="https://www.instagram.com/iuliancitan/">Instagram</a></li>
         </ul>
       </div>

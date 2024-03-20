@@ -14,21 +14,18 @@ import "./App.css";
 import Dubai from "./Page/Dubai";
 import AbuDhabi from "./Page/AbuDhabi";
 import Footer from "./Components/Footer";
-import { FaCartPlus } from "react-icons/fa";
+
 import Cart from "./Components/Cart";
-import { useState } from "react";
 
-export const AppLayout = () => {
-  const [cartItems, setCartItems] = useState([]);
 
-  const handleAddToCart = (product) => {
-    setCartItems((prevItems) => [...prevItems, product]);
-  };
 
+
+
+const AppLayout = () => {
   return (
     <>
-      <Navbar  />
-      <Outlet  />
+      <Navbar />
+      <Outlet />
       <Footer />
     </>
   );
